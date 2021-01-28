@@ -51,17 +51,6 @@ textarea {
   font-family: "Raleway";
 }
 
-textarea,
-input[type="text"],
-input[type="button"],
-input[type="submit"] {
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-     border-radius: 0;
-    -webkit-border-radius:0;
-}
-
 input::-ms-clear {
   display: none;
 }
@@ -103,6 +92,17 @@ h6 {
 }
 
 /*--------------------*/
+textarea,
+input[type=text],
+input[type=button],
+input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 5px;
+  appearance: none;
+  border-radius: 0;
+}
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -662,6 +662,7 @@ h6 {
   padding: 200px 0 100px 0;
   text-align: start;
   display: flex;
+  border-bottom: 0.5px solid rgba(20, 17, 28, 0.2);
 }
 .timeline__title {
   font-size: 50px;
@@ -703,6 +704,7 @@ h6 {
   .timeline__body {
     padding: 50px 0 25px 0;
     flex-direction: column;
+    border: none;
   }
   .timeline__title {
     display: none;
@@ -742,9 +744,12 @@ h6 {
 .gift__body {
   width: 100%;
   margin: 0 auto;
-  padding: 120px 0 180px 0;
+  padding: 120px 0 120px 0;
   text-align: start;
   display: flex;
+}
+.gift__body--noPd {
+  padding-top: 0;
 }
 .gift__title {
   font-size: 50px;
@@ -760,6 +765,13 @@ h6 {
   color: #5d5869;
 }
 @media (max-width: 479px) {
+  .gift__body {
+    padding: 50px 0;
+    flex-direction: column;
+  }
+  .gift__body--noPd {
+    padding-top: 0;
+  }
   .gift__title {
     font-size: 40px;
     margin: 0 0 10px 0;
@@ -771,6 +783,10 @@ h6 {
   }
 }
 @media (min-width: 470px) and (max-width: 767px) {
+  .gift__body {
+    padding: 50px 0;
+    flex-direction: column;
+  }
   .gift__info {
     width: 80%;
     font-size: 14px;
@@ -781,12 +797,6 @@ h6 {
     line-height: 30px;
     margin: 0 0 30px 0;
     width: 30%;
-  }
-}
-@media (max-width: 767px) {
-  .gift__body {
-    padding: 50px 0;
-    flex-direction: column;
   }
 }
 
@@ -828,7 +838,6 @@ h6 {
   margin-right: 40px;
 }
 .confirm__submit {
-  -webkit-appearance: none;
   height: 56px;
   padding: 16px 52px;
   border-radius: 5px;

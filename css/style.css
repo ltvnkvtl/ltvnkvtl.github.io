@@ -51,6 +51,12 @@ textarea {
   font-family: "Raleway";
 }
 
+input, button {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
 input::-ms-clear {
   display: none;
 }

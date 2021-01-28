@@ -299,6 +299,7 @@ h6 {
   .footer__address p {
     font-size: 14px;
     line-height: 20px;
+    margin-top: 12px;
   }
 }
 @media (max-width: 767px) {
@@ -390,12 +391,12 @@ h6 {
 .generation {
   padding: 180px 0 120px 0;
 }
-@media (max-width: 900px) {
+@media (min-width: 479px) and (max-width: 900px) {
   .generation {
     padding: 80px 0;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 478px) {
   .generation {
     padding: 70px 0 0 0;
   }
@@ -478,10 +479,10 @@ h6 {
 }
 .invitation__description {
   color: #2e2541;
-  width: 90%;
+  width: 100%;
   font-size: 30px;
   line-height: 40px;
-  margin: 0 0 35px 0;
+  margin: 0 0 60px 0;
 }
 .invitation__block {
   width: 100%;
@@ -490,7 +491,6 @@ h6 {
   justify-content: space-evenly;
   align-self: center;
   border: 1px solid #e0e0e0;
-  background-color: #f7f8fc;
 }
 .invitation__col {
   display: flex;
@@ -532,9 +532,20 @@ h6 {
   }
   .invitation__col {
     width: 100%;
+    align-items: center;
   }
   .invitation__col--sm {
     margin-bottom: 20px;
+  }
+  .invitation__title {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .invitation__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
@@ -640,7 +651,6 @@ h6 {
   padding: 200px 0 100px 0;
   text-align: start;
   display: flex;
-  border-bottom: 0.5px solid rgba(20, 17, 28, 0.2);
 }
 .timeline__title {
   font-size: 50px;
@@ -684,15 +694,15 @@ h6 {
     flex-direction: column;
   }
   .timeline__title {
-    font-size: 40px;
+    display: none;
   }
   .timeline__time {
-    font-size: 25px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 30px;
   }
   .timeline__activity {
-    font-size: 24px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 30px;
   }
   .timeline__subtext {
     margin-top: 10px;
@@ -752,20 +762,20 @@ h6 {
 @media (min-width: 470px) and (max-width: 767px) {
   .gift__info {
     width: 80%;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 20px;
   }
   .gift__title {
+    font-size: 22px;
+    line-height: 30px;
     margin: 0 0 30px 0;
+    width: 30%;
   }
 }
 @media (max-width: 767px) {
   .gift__body {
     padding: 50px 0;
     flex-direction: column;
-  }
-  .gift__title {
-    width: 30%;
   }
 }
 
@@ -815,6 +825,11 @@ h6 {
   font-size: 18px;
   line-height: 24px;
 }
+.confirm__submit:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s;
+}
 @media (max-width: 479px) {
   .confirm__body {
     width: 100%;
@@ -822,6 +837,9 @@ h6 {
   .confirm__title {
     font-size: 26px;
     line-height: 30px;
+  }
+  .confirm__input {
+    margin-right: 0;
   }
 }
 @media (min-width: 470px) and (max-width: 767px) {
